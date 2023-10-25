@@ -16,15 +16,49 @@ main{
 
 .container{
     position: absolute;
-    border: 3px solid grey;
+    border: 3px solid greenyellow;
     width: 100%;
     bottom: 0;
     display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    background: teal;
+    padding: .4rem;
+    place-items: center;
+}
+:is(.scndRowBtn, .thrdRowBtn, .frthRowBtn){
+    display: grid;
+    border: 2px solid #222;
+    background: #222;
+    width: 5rem;
+    border-radius: 0 0 5px 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-inline: 5px;
+    margin: 5px;
+    justify-content: flex-start;
 }
 
-section{
+.scndRowBtn:nth-child(14){
     display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 8rem;
 }
-.topRowBtn{
-    
+:is(.thrdRowBtn:nth-child(1), .frthRowBtn:nth-child(1)){
+    display: flex;
+    align-items: center;
+    font-size:medium;
+    width: 6rem;
+}
+.frthRowBtn:nth-child(1){
+    width: 7rem;
+}
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    flex-shrink: 2;
 }
